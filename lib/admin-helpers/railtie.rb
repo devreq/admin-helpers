@@ -1,7 +1,10 @@
 module AdminHelpers
   class Railtie < ::Rails::Engine
     paths.app << "app"    
-    config.asset_path = "/admin/%s"
+
+    initializer "static assets" do |app|
+      app.middleware.use ::ActionDispatch::Static, "#{root}/public"
+    end
 
     config.action_view.javascript_expansions[:admin] = AdminHelpers.config[:javascripts]
 
