@@ -1,5 +1,12 @@
 module AdminHelpers
   module Helper
+    def admin_title
+      parts = []
+      parts << I18n.t("admin.#{current_model.name.underscore}.#{controller.action_name.underscore}") rescue nil
+      parts << I18n.t("admin.title") 
+      parts.join(' - ').html_safe
+    end
+    
     def admin_icon(id, *args)
       image_tag("/images/admin/icons/#{id.to_s}.png", *args)
     end
