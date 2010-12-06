@@ -1,0 +1,47 @@
+* {margin: 0; padding: 0;}
+body {width: 100%; margin: 0; padding: 0; color: #4d4d4d; font-family: Tahoma, Geneva, sans-serif; background-color: #fff;}
+table {border: 0; border-collapse: collapse;}
+table td {padding: 0;}
+img {margin: 0; padding: 0; border: 0;}
+a:link {color: #29abe2 !important;}
+a:visited {color: #29abe2 !important;}
+a:hover, a:active {color: #ed1e79 !important;}
+:focus, :active {outline: 0;}
+
+h1 {color: #ff9900; margin: 0 0 1em 0; font: normal 180%/120% Tahoma, Geneva, sans-serif;}
+h2 {color: #ff9900; margin: 1.5em 0 0.5em 0; font: normal 135%/140% Tahoma, Geneva, sans-serif;}
+h3 {color: #4d4d4d; margin: 1em 0 1em 0; font: bold 90%/150% Tahoma, Geneva, sans-serif;}
+h4 {color: #4d4d4d; margin: 1em 0 1em 0; font: bold 80%/150% Tahoma, Geneva, sans-serif;}
+p, pre, blockquote, label, ul, ol, dl, fieldset, address, li, dd {margin: 0; padding: 0;}
+p {margin: 0 0 1em 0;}
+span.nobr {white-space: nowrap;}
+p.br {margin: 0 !important;}
+sup {vertical-align: baseline; position: relative; top: -0.4em;}
+sub {vertical-align: baseline; position: relative; bottom: -0.4em;}
+
+p {padding: 0 0 0 20px; font: normal 80%/150% Tahoma, Geneva, sans-serif;}
+p.big {padding-left: 0; font-size: 105%; line-height: 140%;}
+ol, ul {margin: 0 0 1em 0; padding: 0;}
+ul {list-style: none;}
+ul li {margin: 0 0 0.25em 0; padding: 0 0 0 20px; font: normal 80%/150% Tahoma, Geneva, sans-serif; background: url(/images/bullet.gif) no-repeat scroll 0 0.7em;}
+ol li {margin: 0 0 0.25em 20px; padding: 0; font: normal 80%/150% Tahoma, Geneva, sans-serif;}
+li ol, li ul {margin: 0.25em 0 0 0;}
+li li, li p {font-size: 100%;}
+ol li ul li {margin-left: 0; padding-left: 20px;}
+blockquote {margin: 1em 0 1em 0; padding: 1em; font: normal 80%/150% Tahoma, Geneva, sans-serif; background-color: #f8f8f8;}
+blockquote p {margin: 0; font-size: 100%;}
+img {display: block; margin: 1em 0 1em 0; padding: 0;}
+table {margin: 0.3em 0 1em 0;}
+table th {padding: 3px 4px 3px 4px; color: #fff; font: normal 70%/150% Tahoma, Geneva, sans-serif; text-align: left; background-color: #29abe2;}
+table td {padding: 6px 4px 6px 4px; font: normal 80%/150% Tahoma, Geneva, sans-serif; border-bottom: 1px solid #d3d3d3;}
+table th p, table td p {margin: 0; font-size: 100%;}
+
+li span.nb {color: #ed1e79;}
+p span.nb {position: absolute; z-index: 1; width: 1em; margin: 0 0 0 -1.5em; color: #ed1e79; text-align: right;}
+b.nb {margin-left: -20px; font-size: 140%; font-weight: normal;}
+
+.cols {overflow: hidden;}
+.left {float: left; width: 46%;}
+.right {width: 46%; margin: 0 0 0 54%;}
+
+body {width: 98%; margin: 1%;}
