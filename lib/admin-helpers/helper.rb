@@ -1,7 +1,7 @@
 module AdminHelpers
   module Helper
     def admin_icon(id, *args)
-      image_tag("/admin/icons/#{id.to_s}.png", *args)
+      image_tag("/images/admin/icons/#{id.to_s}.png", *args)
     end
 
     def admin_nav_link(key, url, active, chosen = nil)
