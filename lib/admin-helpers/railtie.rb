@@ -3,6 +3,8 @@ module AdminHelpers
     paths.app << "app"    
     config.asset_path = "/admin/%s"
 
+    config.action_view.javascript_expansions[:admin] = AdminHelpers.config[:javascripts]
+
     initializer "admin-helpers.on_controller" do |app|    
       ActiveSupport.on_load :action_controller do
         ActionController::Base.helper(AdminHelpers::Helper)      
