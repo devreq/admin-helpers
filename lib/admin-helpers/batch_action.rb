@@ -21,8 +21,8 @@ module AdminHelpers
     
         define_method :batch_action do
           objects = current_model.find(params[:ids] || [])
-          defined_actions.each do |d|
-            self.class.defined_batch_actions[d].call(objects) if params[d]
+          actions.each do |d|
+            self.class.defined_batch_actions[d].call(objects) if params[d] && defined_actions.include?(d)
           end
           redirect_to :action => :index
         end
