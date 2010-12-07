@@ -11,3 +11,4 @@ end
 gem "rspec-rails"
 gem "stateful_link", :git => "git://github.com/gzigzigzeo/stateful_link.git"
 gem 'haml'
+gem 'formtastic'
