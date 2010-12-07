@@ -2,7 +2,7 @@ module AdminHelpers
   module Helper
     def admin_title
       parts = []
-      parts << I18n.t("admin.#{current_model.name.underscore}.#{controller.action_name.underscore}") rescue nil
+      parts << I18n.t("admin.headings.#{current_model.name.underscore}.#{controller.action_name.underscore}") rescue nil
       parts << I18n.t("admin.title") 
       parts.join(' - ').html_safe
     end
