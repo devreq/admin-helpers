@@ -59,14 +59,14 @@ module AdminHelpers
 
     def admin_edit_link(o, *args)
       options = args.extract_options!
-      options.reverse_merge!(:title => I18n.t("admin.alts.edit"))
+      options.reverse_merge!(:title => I18n.t("admin.labels.edit"))
       link_to admin_icon(:edit), polymorphic_path([:admin, o], :action => :edit), options
     end
 
     def admin_destroy_link(o, *args)
       options = args.extract_options!
       options.reverse_merge!(
-        :title => I18n.t("admin.alts.destroy"),
+        :title => I18n.t("admin.labels.destroy"),
         :method => :delete,
         :confirm => I18n.t("admin.confirmations.destroy.#{current_model.name.underscore}")
       )
@@ -86,7 +86,7 @@ module AdminHelpers
     end
 
     def admin_move_icon(title)
-      admin_icon(:move, :class => "move", :alt => I18n.t("admin.alts.move"), :rel => title)
+      admin_icon(:move, :class => "move", :alt => I18n.t("admin.labels.move"), :rel => title)
     end
 
     def admin_nav_exit_link
