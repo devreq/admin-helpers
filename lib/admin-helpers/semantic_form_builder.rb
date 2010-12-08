@@ -1,5 +1,5 @@
 module AdminHelpers
-  class SemanticFormBuilder < Formtastic::SemanticFormBuilder
+  class SemanticFormBuilder < ::Formtastic::SemanticFormBuilder
     def attachment_input(method, options)
       style = options.delete(:style)
       after = options.delete(:after)
