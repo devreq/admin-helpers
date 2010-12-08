@@ -13,7 +13,7 @@ begin
     gem.summary = "Helpers for rockbee/molinos admin panels"
     gem.description = "Helpers for rockbee/molinos admin panels"
     gem.files =  FileList["[A-Z]*", "lib/**/*"]
-    gem.version = "0.0.1"
+    gem.version = "0.0.2"
     gem.email = "gzigzigzeo@gmail.com"
     gem.authors = ["Victor Sokolov"]
     gem.homepage = "http://studio.molinos.ru"
