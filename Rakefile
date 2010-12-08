@@ -19,6 +19,7 @@ begin
     gem.homepage = "http://studio.molinos.ru"
             
     gem.add_dependency "rails", ">= 3.0.0"    
+    gem.add_dependency "formtastic"
   end
   
   Jeweler::GemcutterTasks.new
