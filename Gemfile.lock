@@ -9,6 +9,7 @@ PATH
   remote: .
   specs:
     admin-helpers (0.0.1)
+      formtastic
       rails (>= 3.0.0)
 
 GEM
