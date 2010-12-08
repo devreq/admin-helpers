@@ -73,10 +73,21 @@ module AdminHelpers
       link_to admin_icon(:delete), polymorphic_path([:admin, o]), options
     end
 
+    def admin_filter(label = nil, &block)
+      content_tag :div, :class => "filter" do
+        content_tag :ul do
+          html = []
+          html << "<li><b>#{label}</b></li>".html_safe if label
+          html << capture(&block)
+          html.join.html_safe
+        end
+      end
+    end
+
     def admin_filter_link(label, link, &block)
       stateful_link_to(
         :active => label, 
-        :inactive => link,
+        :inactive => link_to(label, link),
         :state => block
       )
     end
