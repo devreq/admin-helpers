@@ -1,3 +1,13 @@
+begin
+  require "bundler"
+  Bundler.setup
+rescue Bundler::GemNotFound
+  raise RuntimeError, "Bundler couldn't find some gems." +
+    "Did you run `bundle install`?"
+end
+
+Bundler.require
+
 module AdminHelpers
   require 'admin-helpers/config'    
   require 'admin-helpers/helper'
