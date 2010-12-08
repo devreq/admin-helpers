@@ -1,14 +1,10 @@
 source "http://rubygems.org"
 
-gem "rails", ">= 3"
-gem "sqlite3-ruby", :require => "sqlite3"
-gem 'haml'
-gem 'formtastic'
-gem "admin-helpers", :path => '.'
+gemspec
 
+gem "sqlite3-ruby", :require => "sqlite3"
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", ">= 0.10.3"
 end
 
 gem "rspec-rails"
-gem "stateful_link", :git => "git://github.com/gzigzigzeo/stateful_link.git"

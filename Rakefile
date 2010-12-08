@@ -20,6 +20,8 @@ begin
             
     gem.add_dependency "rails", ">= 3.0.0"    
     gem.add_dependency "formtastic"
+    gem.add_dependency "haml"
+    gem.add_dependency "stateful_link"
   end
   
   Jeweler::GemcutterTasks.new

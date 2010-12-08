@@ -1,3 +1,5 @@
+require 'formtastic'
+
 module AdminHelpers
   class SemanticFormBuilder < ::Formtastic::SemanticFormBuilder
     def attachment_input(method, options)
