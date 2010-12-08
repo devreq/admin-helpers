@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    admin-helpers (0.0.1)
+    admin-helpers (0.0.2)
       formtastic
       rails (>= 3.0.0)
 
