@@ -5,7 +5,11 @@ module AdminHelpers
     included do
       class_attribute :defined_batch_actions
       self.defined_batch_actions = {
-        :destroy => proc { |objects| objects.each { |o| o.destroy } }    
+        :destroy => :destroy,
+        :publish => :publish!,
+        :unpublish => :unpublish!,
+        :nav_publish => :nav_publish!,
+        :nav_unpublish => :nav_unpublish!        
       }
     end
     
@@ -21,8 +25,15 @@ module AdminHelpers
     
         define_method :batch_action do
           objects = current_model.find(params[:ids] || [])
-          actions.each do |d|
-            self.class.defined_batch_actions[d].call(objects) if params[d] && defined_actions.include?(d)
+          actions.each do |d|            
+            if params[d] && defined_actions.include?(d)
+              action = self.class.defined_batch_actions[d]                        
+              if action.is_a?(Proc)
+                action.call(objects)
+              else
+                object.each { |o| o.send(action) }
+              end
+            end
           end
           redirect_to :action => :index
         end
