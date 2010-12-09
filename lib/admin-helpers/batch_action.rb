@@ -3,7 +3,7 @@ module AdminHelpers
     extend ActiveSupport::Concern
     
     included do
-      class_inheritable_hash :defined_batch_actions
+      class_attribute :defined_batch_actions
       self.defined_batch_actions = {
         :destroy => proc { |objects| objects.each { |o| o.destroy } }    
       }
@@ -11,7 +11,7 @@ module AdminHelpers
     
     module ClassMethods
       def define_batch_action(action, proc)
-        batch_action_procs[action] = proc
+        defined_batch_actions[action] = proc
       end
 
       def batch_action(*args)
