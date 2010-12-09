@@ -119,8 +119,7 @@ module AdminHelpers
       label = options.delete(:label) || I18n.t(:"admin.labels.#{key}")
       name = options.delete(:name) || key
       confirm = options.delete(:confirm)
-      confirm = I18n.t(:"admin.confirmations.delete.#{current_model.name.underscore}") if confirm.nil?
-      confirm = nil if confirm == false      
+      confirm = I18n.t(:"admin.confirmations.delete.#{current_model.name.underscore}") if confirm == true
       submit_tag label, :name => name, :confirm => confirm
     end
 
