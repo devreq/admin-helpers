@@ -13,7 +13,7 @@ module AdminHelpers
 
     def admin_nav_link(key, url, active, chosen = nil, *args)
       options = args.extract_options!
-      label = options.delete[:label] || I18n.t(:"admin.navigation.#{key}")
+      label = options.delete(:label) || I18n.t(:"admin.navigation.#{key}")
       stateful_link_to(
         active,
         chosen,
