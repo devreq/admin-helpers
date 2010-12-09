@@ -11,8 +11,9 @@ module AdminHelpers
       image_tag("/images/admin/icons/#{id.to_s}.png", *args)
     end
 
-    def admin_nav_link(key, url, active, chosen = nil)
-      label = I18n.t(:"admin.navigation.#{key}")
+    def admin_nav_link(key, url, active, chosen = nil, *args)
+      options = args.extract_options!
+      label = options.delete[:label] || I18n.t(:"admin.navigation.#{key}")
       stateful_link_to(
         active,
         chosen,
@@ -113,13 +114,14 @@ module AdminHelpers
       "<li class='r'>#{link_to "Перейти на сайт", "/"}</li>".html_safe
     end    
 
-    def admin_delete_batch_button
-      submit_tag "Удалить", :name => :destroy, :confirm => I18n.t(:"admin.confirmations.delete.#{current_model.name.underscore}")
-    end
-
-    def admin_publish_and_unpublish_batch_button
-      submit_tag("Опубликовать", :name => :publish) + " ".html_safe +
-      submit_tag("Снять с публикации", :name => :unpublish)
+    def admin_batch_button(key,  *args)
+      options = args.extract_options!
+      label = options.delete(:label) || I18n.t(:"admin.labels.#{key}")
+      name = options.delete(:name) || key
+      confirm = options.delete(:confirm)
+      confirm = I18n.t(:"admin.confirmations.delete.#{current_model.name.underscore}") if confirm.nil
+      confirm = nil if confirm == false      
+      submit_tag label, :name => name, :confirm => confirm
     end
 
     def admin_help_link

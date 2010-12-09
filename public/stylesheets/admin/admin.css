@@ -99,11 +99,11 @@ table.list tbody tr.light td {background-color: #e8e8e8;}
 table.list tbody tr.root td {background-color: #f8f8f8;}
 table.list tfoot tr.actions td {text-align: right;}
 
-tbody#pages tr td.level_1, dt.level_1 {padding-left: 20px;}
-tbody#pages tr td.level_2, dt.level_2 {padding-left: 40px;}
-tbody#pages tr td.level_3, dt.level_3 {padding-left: 60px;}
-tbody#pages tr td.level_4, dt.level_4 {padding-left: 80px;}
-tbody#pages tr td.level_5, dt.level_5 {padding-left: 100px;}
+table.list tbody tr td.level_1, dt.level_1 {padding-left: 20px;}
+table.list tbody tr td.level_2, dt.level_2 {padding-left: 40px;}
+table.list tbody tr td.level_3, dt.level_3 {padding-left: 60px;}
+table.list tbody tr td.level_4, dt.level_4 {padding-left: 80px;}
+table.list tbody tr td.level_5, dt.level_5 {padding-left: 100px;}
 
 tbody#pages tr td a.parent img {vertical-align: text-top;}
 
