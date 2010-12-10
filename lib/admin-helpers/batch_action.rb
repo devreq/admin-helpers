@@ -31,7 +31,7 @@ module AdminHelpers
               if action.is_a?(Proc)
                 action.call(objects)
               else
-                object.each { |o| o.send(action) }
+                objects.each { |o| o.send(action) }
               end
             end
           end
