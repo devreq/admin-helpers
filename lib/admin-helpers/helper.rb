@@ -60,14 +60,14 @@ module AdminHelpers
 
     def admin_edit_link(o, *args)
       options = args.extract_options!
-      url = options.delete[:url]      
+      url = options.delete(:url)
       options.reverse_merge!(:title => I18n.t("admin.labels.edit"))    
       link_to admin_icon(:edit), url || polymorphic_path([:admin, o], :action => :edit), options
     end
 
     def admin_destroy_link(o, *args)
       options = args.extract_options!
-      url = options.delete[:url]      
+      url = options.delete(:url)      
       options.reverse_merge!(
         :title => I18n.t("admin.labels.destroy"),
         :method => :delete,
