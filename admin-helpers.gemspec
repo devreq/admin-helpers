@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Sokolov"]
-  s.date = %q{2010-12-08}
+  s.date = %q{2010-12-10}
   s.description = %q{Helpers for rockbee/molinos admin panels}
   s.email = %q{gzigzigzeo@gmail.com}
   s.extra_rdoc_files = [
@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
      "lib/admin-helpers.rb",
      "lib/admin-helpers/batch_action.rb",
      "lib/admin-helpers/config.rb",
-     "lib/admin-helpers/helper.rb",
      "lib/admin-helpers/railtie.rb",
      "lib/admin-helpers/semantic_form_builder.rb"
   ]

@@ -2,5 +2,7 @@ module AdminHelpers
   require 'admin-helpers/config'    
   require 'admin-helpers/batch_action'
   require 'admin-helpers/semantic_form_builder'
+  require 'app/helpers/admin_helper'
+  require 'app/helpers/jquery_helper'  
   require 'admin-helpers/railtie' if defined?(Rails)
 end
