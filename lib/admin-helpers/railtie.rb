@@ -11,6 +11,7 @@ module AdminHelpers
     initializer "admin-helpers.on_controller" do |app|    
       ActiveSupport.on_load :action_controller do
         ActionController::Base.helper(AdminHelpers::Helper)      
+        ActionController::Base.helper(AdminHelpers::Jquery)
       end  
     end    
   end
