@@ -51,7 +51,7 @@ module AdminHelpers
       options = args.extract_options!
       rows = options.delete(:rows) || current_objects
       rows = rows.map do |r|
-        o = options.reverse_merge(:id => "#{current_model.name.underscore}_#{id}", :rel => r[:id])
+        o = options.reverse_merge(:id => "#{current_model.name.underscore}_#{r.id}", :rel => r.id)
         b = capture(r, &block)
         content_tag :tr, b, o
       end
@@ -60,18 +60,20 @@ module AdminHelpers
 
     def admin_edit_link(o, *args)
       options = args.extract_options!
-      options.reverse_merge!(:title => I18n.t("admin.labels.edit"))
-      link_to admin_icon(:edit), polymorphic_path([:admin, o], :action => :edit), options
+      url = options.delete[:url]      
+      options.reverse_merge!(:title => I18n.t("admin.labels.edit"))    
+      link_to admin_icon(:edit), url || polymorphic_path([:admin, o], :action => :edit), options
     end
 
     def admin_destroy_link(o, *args)
       options = args.extract_options!
+      url = options.delete[:url]      
       options.reverse_merge!(
         :title => I18n.t("admin.labels.destroy"),
         :method => :delete,
         :confirm => I18n.t("admin.confirmations.destroy.#{current_model.name.underscore}")
       )
-      link_to admin_icon(:delete), polymorphic_path([:admin, o]), options
+      link_to admin_icon(:delete), url || polymorphic_path([:admin, o]), options
     end
 
     def admin_filter(label = nil, &block)
