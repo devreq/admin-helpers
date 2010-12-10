@@ -126,7 +126,7 @@ module AdminHelpers
     end
 
     def admin_help_link
-      %{<a href="#" title="Помощь" id="help_icon"><img src="/images/icons/info.png" width="16" height="16" alt="Помощь"/></a>}.html_safe
+      %{<a href="#" title="Помощь" id="help_icon">#{admin_icon(:info)}</a>}.html_safe
     end    
 
     def admin_help(title, &block)
