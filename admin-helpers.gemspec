@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Sokolov"]
-  s.date = %q{2010-12-10}
+  s.date = %q{2010-12-13}
   s.description = %q{Helpers for rockbee/molinos admin panels}
   s.email = %q{gzigzigzeo@gmail.com}
   s.extra_rdoc_files = [
@@ -22,10 +22,13 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "lib/admin-helpers.rb",
+     "lib/admin-helpers/admin.rb",
      "lib/admin-helpers/batch_action.rb",
      "lib/admin-helpers/config.rb",
+     "lib/admin-helpers/jquery.rb",
      "lib/admin-helpers/railtie.rb",
-     "lib/admin-helpers/semantic_form_builder.rb"
+     "lib/admin-helpers/semantic_form_builder.rb",
+     "lib/admin-helpers/swfupload.rb"
   ]
   s.homepage = %q{http://studio.molinos.ru}
   s.rdoc_options = ["--charset=UTF-8"]

@@ -12,6 +12,7 @@ module AdminHelpers
       ActiveSupport.on_load :action_controller do
         ActionController::Base.helper(AdminHelpers::Helper)      
         ActionController::Base.helper(AdminHelpers::Jquery)
+        ActionController::Base.helper(AdminHelpers::Swfupload)        
       end  
     end    
   end
