@@ -5,7 +5,7 @@ module AdminHelpers
     config.action_view.javascript_expansions[:admin] = AdminHelpers.config[:javascripts]
 
     initializer "static assets" do |app|
-      app.middleware.use ::ActionDispatch::Static, "#{root}/public"
+      app.middleware.use ::ActionDispatch::Static, "#{root}/public" if Rails.env == 'development'
     end
 
     initializer "admin-helpers.on_controller" do |app|    

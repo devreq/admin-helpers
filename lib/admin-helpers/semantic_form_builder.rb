@@ -4,17 +4,34 @@ module AdminHelpers
   class SemanticFormBuilder < ::Formtastic::SemanticFormBuilder
     def attachment_input(method, options)
       style = options.delete(:style)
-      after = options.delete(:after)
+      after = options.delete(:after)    
       html_options = options.delete(:input_html) || {}
-      a = if @object.send(:"#{method}").file?
-        ct = @object.send(:"#{method}_content_type")      
-        if ct =~ /image/
-          "<img src='#{@object.send(method).url(style)}'/>".html_safe
-        else
-          fn = @object.send(:"#{method}_file_name")
-          fs = @object.send(:"#{method}_file_size")
-          "<p class='inline-hints'>#{fn} (#{@template.number_to_human_size(fs)})</p>".html_safe
+      
+      engine = options.delete(:engine) || :paperclip
+      
+      if engine == :paperclip          
+        a = if @object.send(:"#{method}").file?
+          ct = @object.send(:"#{method}_content_type")      
+          if ct =~ /image/
+            "<img src='#{@object.send(method).url(style)}'/>".html_safe
+          else
+            fn = @object.send(:"#{method}_file_name")
+            fs = @object.send(:"#{method}_file_size")
+            "<p class='inline-hints'>#{fn} (#{@template.number_to_human_size(fs)})</p>".html_safe
+          end
         end
+      elsif engine == :carrierwave
+        uploader = @object.send(:"#{method}")
+        a = unless uploader.file.nil?
+          ct = uploader.meta_content_type(style)
+          if ct =~ /image/
+            "<img src='#{@object.send(method).url(style)}'/>".html_safe
+          else
+            fn = uploader.meta_filename
+            fs = uploader.meta_size(style)
+            "<p class='inline-hints'>#{fn} (#{@template.number_to_human_size(fs)})</p>".html_safe
+          end
+        end        
       end
 
       self.label(method, options_for_label(options)) <<
