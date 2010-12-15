@@ -14,6 +14,10 @@ module AdminHelpers
         ActionController::Base.helper(AdminHelpers::Jquery)
         ActionController::Base.helper(AdminHelpers::Swfupload)        
       end  
+    end
+    
+    rake_tasks do
+      load "tasks.rake"
     end    
   end
 end
