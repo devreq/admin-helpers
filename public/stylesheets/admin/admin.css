@@ -160,7 +160,7 @@ img.-move, img._move {cursor: move;}
 .upload {margin: 0 0 10px 0;}
 .upload form input {font: normal 75%/1 Tahoma, Geneva, sans-serif;}
 
-.swfupload {height: 22px;}
+.swfupload {margin: 0 0 1em 0; height: 22px;}
 
 .loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
 .progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
@@ -250,11 +250,9 @@ form.formtastic fieldset.inputs img {display: block; margin: 3px 0 0 25%; paddin
 div.actions {text-align: right;}
 div.actions input {font-size: 11px;}
 
-#assets li, form.formtastic fieldset ul.gallery li {overflow: hidden;}
-#assets li span, form.formtastic fieldset ul.gallery li span {display: block; float: left; width: 24%; margin: 0;}
-#assets li span img, form.formtastic fieldset ul.gallery li span img {margin: 0; padding; 0;}
-#assets li input, form.formtastic fieldset ul.gallery li input {display: block; float: left; width: 250px; margin: 0 1em 0 1%; padding: 0; font-size: 100%;}
-#assets li a, form.formtastic fieldset ul.gallery li a {display: block; float: left; width: 16px; height: 16px; margin: -2px 0 0 0;}
+#assets li {overflow: hidden;}
+#assets li input {display: block; float: left; width: 250px; margin: 0 1em 0 0; padding: 0; font-size: 100%;}
+#assets li a {display: block; float: left; width: 16px; height: 16px; margin: 0;}
 
 .redactor {width: 74.25% !important;}
 
