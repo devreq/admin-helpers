@@ -19,7 +19,7 @@ module AdminHelpers
         chosen,
         :active => "<li class='active'>#{label}</li>", 
         :inactive => "<li>#{link_to label, url}</li>",
-        :chosen => "<li class='chosen'>#{link_to label, url}</li>"  
+        :chosen => "<li class='chosen'>#{link_to label, url}</li>"
       ).html_safe
     end
 
