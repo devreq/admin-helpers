@@ -98,6 +98,7 @@ table.list .form input, table.list .form select, table.list .form textarea {font
 table.list tbody tr.light td {background-color: #e8e8e8;}
 table.list tbody tr.root td {background-color: #f8f8f8;}
 table.list tfoot tr.actions td {text-align: right;}
+table.list tfoot tr.actions td input {font-size: 11px;}
 
 table.list tbody tr td.level_1, dt.level_1 {padding-left: 20px;}
 table.list tbody tr td.level_2, dt.level_2 {padding-left: 40px;}
