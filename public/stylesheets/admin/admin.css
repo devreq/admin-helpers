@@ -97,7 +97,7 @@ table.list .form input, table.list .form select, table.list .form textarea {font
 
 table.list tbody tr.light td {background-color: #e8e8e8;}
 table.list tbody tr.root td {background-color: #f8f8f8;}
-table.list tfoot tr.actions td {font-size: 12px; text-align: right;}
+table.list tfoot tr.actions td {text-align: right;}
 
 table.list tbody tr td.level_1, dt.level_1 {padding-left: 20px;}
 table.list tbody tr td.level_2, dt.level_2 {padding-left: 40px;}
@@ -203,7 +203,7 @@ form.formtastic .inputs .boolean label {margin: 0; padding-top: 0; font-size: 90
 
 form.formtastic .buttons {margin: 0; padding: 0 !important; border: 0;}
 form.formtastic .buttons ol li {margin: 0;}
-form.formtastic .buttons ol li.commit {font-size: 12px;}
+form.formtastic .buttons ol li.commit input {font-size: 11px;}
 
 form.formtastic .hidden ol {display: none;}
 	form.formtastic .hidden legend {background: url(/images/admin/open.gif) no-repeat scroll right 0.35em; padding-right: 16px; cursor: pointer;}
