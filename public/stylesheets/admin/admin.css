@@ -152,6 +152,7 @@ img.-move, img._move {cursor: move;}
 
 .pages ul .dragging {width: auto !important; border: 1px solid #e8e8e8;}
 .pages ul .dragging div {padding-right: 32px;}
+.pages ul .dragging span {margin-right: 0;}
 .pages ul .dragging a, .pages ul .dragging img.-state, .pages ul .dragging img.-nav, .pages ul .dragging input, .pages ul .dragging i {display: none !important;}
 
 .pages ul .placeholder {background-color: #d8d8d8;}
