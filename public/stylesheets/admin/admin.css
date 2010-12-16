@@ -203,6 +203,7 @@ form.formtastic .inputs .boolean label {margin: 0; padding-top: 0; font-size: 90
 
 form.formtastic .buttons {margin: 0; padding: 0 !important; border: 0;}
 form.formtastic .buttons ol li {margin: 0;}
+form.formtastic .buttons ol li.commit {font-size: 90%;}
 
 form.formtastic .hidden ol {display: none;}
 	form.formtastic .hidden legend {background: url(/images/admin/open.gif) no-repeat scroll right 0.35em; padding-right: 16px; cursor: pointer;}
