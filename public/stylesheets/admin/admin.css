@@ -98,6 +98,7 @@ table.list .form input, table.list .form select, table.list .form textarea {font
 table.list tbody tr.light td {background-color: #e8e8e8;}
 table.list tbody tr.root td {background-color: #f8f8f8;}
 table.list tfoot tr.actions td {text-align: right;}
+table.list tfoot tr.actions td input {font-size: 11px;}
 
 table.list tbody tr td.level_1, dt.level_1 {padding-left: 20px;}
 table.list tbody tr td.level_2, dt.level_2 {padding-left: 40px;}
@@ -132,9 +133,48 @@ img.-move, img._move {cursor: move;}
 .pagination em, .pagination a:hover, .pagination a:active {color: #333; text-decoration: none; background-color: #ddd;}
 .pagination .disabled {display: none;}
 
+.pages {margin: 0 0 12px 0; padding: 0;}
+.pages ul {list-style: none; margin: 0; padding: 0;}
+.pages ul li {margin: 0 0 4px 0; padding: 0;}
+
+.pages ul li div {position: relative; margin: 0; padding: 8px 0 8px 0; background-color: #f8f8f8; border: 1px solid #e8e8e8; overflow: hidden;}
+.pages ul li div:hover {background-color: #e8e8e8;}
+.pages ul li img.-move {display: block; position: absolute; z-index: 2; left: 8px; top: 10px; margin: 0;}
+.pages ul li img.-state {display: block; position: absolute; z-index: 2; right: 136px; top: 10px; margin: 0;}
+.pages ul li img.-nav {display: block; position: absolute; z-index: 2; right: 112px; top: 10px; margin: 0;}
+.pages ul li a.-edit {display: block; position: absolute; z-index: 2; right: 48px; top: 9px; margin: 0;}
+.pages ul li a.-show {display: block; position: absolute; z-index: 2; right: 72px; top: 9px; margin: 0;}
+.pages ul li input {display: block; position: absolute; z-index: 2; right: 8px; top: 10px; margin: 0;}
+.pages ul li span {display: block; margin: 0 600px 0 32px;}
+.pages ul li i {display: block; float: right; width: 400px; margin: 0 176px 0 0; font-style: normal;}
+
+.pages ul li ul {margin-top: 4px;}
+.pages ul li ul li {margin-left: 32px;}
+
+.pages ul .dragging {width: auto !important; border: 1px solid #e8e8e8;}
+.pages ul .dragging div {padding-right: 32px;}
+.pages ul .dragging span {margin-right: 0;}
+.pages ul .dragging a, .pages ul .dragging img.-state, .pages ul .dragging img.-nav, .pages ul .dragging input, .pages ul .dragging i {display: none !important;}
+
+.pages ul .placeholder {background-color: #d8d8d8;}
+
+.mainpage {position: relative; margin: 0 0 4px 0; padding: 11px 0 11px 8px; font-size: 75%; font-weight: normal; background-color: #f8f8f8; border: 1px solid #e8e8e8;}
+.mainpage:hover {background-color: #e8e8e8;}
+.mainpage a {display: block; position: absolute; z-index: 2; right: 48px; top: 9px; margin: 0;}
+
 .ui-dialog-content {font-size: 95%;}
 .upload {margin: 0 0 10px 0;}
 .upload form input {font: normal 75%/1 Tahoma, Geneva, sans-serif;}
+
+.swfupload {margin: 0 0 1em 0; height: 22px;}
+
+.loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
+.progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
+.loading p {color: #333; font: normal 75%/120% Tahoma, Geneva, sans-serif;}
+.loading p.name {margin: 0;}
+.loading p.bar {margin-top: 4px; padding: 2px; border: 1px solid #afc4a1;}
+.loading p.bar span {display: block; width: auto; height: 4px; background-color: #afc4a1;}
+.loading p.processing {height: 10px; margin-top: 4px; font-size: 60%; line-height: 1;}
 
 .ie {display: none; margin: 10px; color: #333; font: normal 80%/1.4 Tahoma, Geneva, sans-serif;}
 
@@ -147,6 +187,11 @@ textarea.normal {height: 102px;}
 textarea.maxi {height: 152px;}
 select {margin: 0 4px 0 0; padding: 1px 1px 1px 0;}
 select option {padding: 0 12px 0 4px;}
+option.level_1 {padding-left: 1em;}
+option.level_2 {padding-left: 2em;}
+option.level_3 {padding-left: 3em;}
+option.level_4 {padding-left: 4em;}
+option.level_5 {padding-left: 5em;}
 
 .autosize {width: auto !important;}
 .xs {width: 4%;}
@@ -188,6 +233,7 @@ form.formtastic .inputs .boolean label {margin: 0; padding-top: 0; font-size: 90
 
 form.formtastic .buttons {margin: 0; padding: 0 !important; border: 0;}
 form.formtastic .buttons ol li {margin: 0;}
+form.formtastic .buttons ol li.commit input {font-size: 11px;}
 
 form.formtastic .hidden ol {display: none;}
 	form.formtastic .hidden legend {background: url(/images/admin/open.gif) no-repeat scroll right 0.35em; padding-right: 16px; cursor: pointer;}
@@ -206,6 +252,13 @@ form.formtastic fieldset.inputs img {display: block; margin: 3px 0 0 25%; paddin
 .inline-errors {margin: 0 0 0 25% !important; color: #ff0000; font-size: 90%; font-weight: bold; }
 
 .hasDatepicker {width: 8em !important;}
+
+div.actions {text-align: right;}
+div.actions input {font-size: 11px;}
+
+#assets li {margin-bottom: 1em; overflow: hidden;}
+#assets li input {display: block; float: left; width: 250px; margin: 0 1em 0 0; padding: 0; font-size: 100%;}
+#assets li a {display: block; float: left; width: 16px; height: 16px; margin: 2px 0 0 0;}
 
 .redactor {width: 74.25% !important;}
 
@@ -233,14 +286,6 @@ form.formtastic fieldset.inputs ol li a.del {display: block; width: 100px; margi
 
 form.formtastic fieldset ul.gallery li input {width: 50% !important;}
 form.formtastic fieldset ul.gallery li a img {margin-top: 5px;}
-
-#attachments li, form.formtastic fieldset ul.gallery li {overflow: hidden;}
-#attachments li span, form.formtastic fieldset ul.gallery li span {display: block; float: left; width: 24%; margin: 0;}
-#attachments li span img, form.formtastic fieldset ul.gallery li span img {margin: 0; padding; 0;}
-#attachments li input, form.formtastic fieldset ul.gallery li input {display: block; float: left; width: 250px; margin: 0 1em 0 1%; padding: 0; font-size: 100%;}
-#attachments li a, form.formtastic fieldset ul.gallery li a {display: block; float: left; width: 16px; height: 16px; margin: -2px 0 0 0;}
-
-.swfupload {height: 22px;}
 
 form.imgs {background-color: transparent; border: 0; padding: 0;}
 
@@ -279,14 +324,6 @@ table.item tr.odd, table.list tr.odd td, table.list tr td.odd {background-color:
 #progress .progress .bar { height: 1em; background-color: green; text-align: center; width: 0; }
 
 .version {position: absolute; z-index: 10; right: 0; top: 0; float: left; width: auto; height: auto; margin: 0; padding: 1px 8px 3px 8px; color: #333; font: normal 70%/100% Tahoma, Geneva, sans-serif; background-color: #ddf8cc;}
-
-.loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
-.progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
-.loading p {color: #333; font: normal 75%/120% Tahoma, Geneva, sans-serif;}
-.loading p.name {margin: 0;}
-.loading p.bar {margin-top: 4px; padding: 2px; border: 1px solid #afc4a1;}
-.loading p.bar span {display: block; width: auto; height: 4px; background-color: #afc4a1;}
-.loading p.processing {height: 10px; margin-top: 4px; font-size: 60%; line-height: 1;}
 
 a.switch {display: block; width: 16px; height: 16px;}
 a.supervisor {background: url(/images/icons/admin.png) no-repeat scroll -16px 0;}
@@ -351,12 +388,6 @@ table.list tr.drop_hover td {background-color: #478bcf;}
 #help a.dotted:hover, #help a.dotted:active {color: #ff6600; text-decoration: none; border-bottom: 1px dotted #ff6600;}
 
 .ui-effects-transfer {background-color: #000; opacity: 0.1; -khtml-opacity: 0.1; -moz-opacity: 0.1; filter: alpha(opacity=10); -ms-filter: "alpha(opacity=10)";}
-
-option.level_1 {padding-left: 1em;}
-option.level_2 {padding-left: 2em;}
-option.level_3 {padding-left: 3em;}
-option.level_4 {padding-left: 4em;}
-option.level_5 {padding-left: 5em;}
 
 .letter p {color: #333; font: normal 75%/140% Tahoma, Geneva, sans-serif;}
 
