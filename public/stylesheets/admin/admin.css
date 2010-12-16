@@ -157,6 +157,10 @@ img.-move, img._move {cursor: move;}
 
 .pages ul .placeholder {background-color: #d8d8d8;}
 
+.mainpage {margin: 0 0 4px 0; padding: 8px 0 8px 32px; background-color: #f8f8f8; border: 1px solid #e8e8e8;}
+.mainpage:hover {background-color: #e8e8e8;}
+.mainpage a {display: block; position: absolute; z-index: 2; right: 48px; top: 9px; margin: 0;}
+
 .ui-dialog-content {font-size: 95%;}
 .upload {margin: 0 0 10px 0;}
 .upload form input {font: normal 75%/1 Tahoma, Geneva, sans-serif;}
