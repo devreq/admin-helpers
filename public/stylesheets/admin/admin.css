@@ -136,6 +136,16 @@ img.-move, img._move {cursor: move;}
 .upload {margin: 0 0 10px 0;}
 .upload form input {font: normal 75%/1 Tahoma, Geneva, sans-serif;}
 
+.swfupload {height: 22px;}
+
+.loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
+.progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
+.loading p {color: #333; font: normal 75%/120% Tahoma, Geneva, sans-serif;}
+.loading p.name {margin: 0;}
+.loading p.bar {margin-top: 4px; padding: 2px; border: 1px solid #afc4a1;}
+.loading p.bar span {display: block; width: auto; height: 4px; background-color: #afc4a1;}
+.loading p.processing {height: 10px; margin-top: 4px; font-size: 60%; line-height: 1;}
+
 .ie {display: none; margin: 10px; color: #333; font: normal 80%/1.4 Tahoma, Geneva, sans-serif;}
 
 /* Forms */
@@ -212,6 +222,12 @@ form.formtastic fieldset.inputs img {display: block; margin: 3px 0 0 25%; paddin
 
 .hasDatepicker {width: 8em !important;}
 
+#attachments li, form.formtastic fieldset ul.gallery li {overflow: hidden;}
+#attachments li span, form.formtastic fieldset ul.gallery li span {display: block; float: left; width: 24%; margin: 0;}
+#attachments li span img, form.formtastic fieldset ul.gallery li span img {margin: 0; padding; 0;}
+#attachments li input, form.formtastic fieldset ul.gallery li input {display: block; float: left; width: 250px; margin: 0 1em 0 1%; padding: 0; font-size: 100%;}
+#attachments li a, form.formtastic fieldset ul.gallery li a {display: block; float: left; width: 16px; height: 16px; margin: -2px 0 0 0;}
+
 .redactor {width: 74.25% !important;}
 
 /*
@@ -238,14 +254,6 @@ form.formtastic fieldset.inputs ol li a.del {display: block; width: 100px; margi
 
 form.formtastic fieldset ul.gallery li input {width: 50% !important;}
 form.formtastic fieldset ul.gallery li a img {margin-top: 5px;}
-
-#attachments li, form.formtastic fieldset ul.gallery li {overflow: hidden;}
-#attachments li span, form.formtastic fieldset ul.gallery li span {display: block; float: left; width: 24%; margin: 0;}
-#attachments li span img, form.formtastic fieldset ul.gallery li span img {margin: 0; padding; 0;}
-#attachments li input, form.formtastic fieldset ul.gallery li input {display: block; float: left; width: 250px; margin: 0 1em 0 1%; padding: 0; font-size: 100%;}
-#attachments li a, form.formtastic fieldset ul.gallery li a {display: block; float: left; width: 16px; height: 16px; margin: -2px 0 0 0;}
-
-.swfupload {height: 22px;}
 
 form.imgs {background-color: transparent; border: 0; padding: 0;}
 
@@ -284,14 +292,6 @@ table.item tr.odd, table.list tr.odd td, table.list tr td.odd {background-color:
 #progress .progress .bar { height: 1em; background-color: green; text-align: center; width: 0; }
 
 .version {position: absolute; z-index: 10; right: 0; top: 0; float: left; width: auto; height: auto; margin: 0; padding: 1px 8px 3px 8px; color: #333; font: normal 70%/100% Tahoma, Geneva, sans-serif; background-color: #ddf8cc;}
-
-.loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
-.progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
-.loading p {color: #333; font: normal 75%/120% Tahoma, Geneva, sans-serif;}
-.loading p.name {margin: 0;}
-.loading p.bar {margin-top: 4px; padding: 2px; border: 1px solid #afc4a1;}
-.loading p.bar span {display: block; width: auto; height: 4px; background-color: #afc4a1;}
-.loading p.processing {height: 10px; margin-top: 4px; font-size: 60%; line-height: 1;}
 
 a.switch {display: block; width: 16px; height: 16px;}
 a.supervisor {background: url(/images/icons/admin.png) no-repeat scroll -16px 0;}
