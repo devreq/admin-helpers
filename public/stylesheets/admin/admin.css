@@ -147,6 +147,11 @@ textarea.normal {height: 102px;}
 textarea.maxi {height: 152px;}
 select {margin: 0 4px 0 0; padding: 1px 1px 1px 0;}
 select option {padding: 0 12px 0 4px;}
+option.level_1 {padding-left: 1em;}
+option.level_2 {padding-left: 2em;}
+option.level_3 {padding-left: 3em;}
+option.level_4 {padding-left: 4em;}
+option.level_5 {padding-left: 5em;}
 
 .autosize {width: auto !important;}
 .xs {width: 4%;}
@@ -351,12 +356,6 @@ table.list tr.drop_hover td {background-color: #478bcf;}
 #help a.dotted:hover, #help a.dotted:active {color: #ff6600; text-decoration: none; border-bottom: 1px dotted #ff6600;}
 
 .ui-effects-transfer {background-color: #000; opacity: 0.1; -khtml-opacity: 0.1; -moz-opacity: 0.1; filter: alpha(opacity=10); -ms-filter: "alpha(opacity=10)";}
-
-option.level_1 {padding-left: 1em;}
-option.level_2 {padding-left: 2em;}
-option.level_3 {padding-left: 3em;}
-option.level_4 {padding-left: 4em;}
-option.level_5 {padding-left: 5em;}
 
 .letter p {color: #333; font: normal 75%/140% Tahoma, Geneva, sans-serif;}
 
