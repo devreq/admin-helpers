@@ -132,6 +132,30 @@ img.-move, img._move {cursor: move;}
 .pagination em, .pagination a:hover, .pagination a:active {color: #333; text-decoration: none; background-color: #ddd;}
 .pagination .disabled {display: none;}
 
+.pages {margin: 0 0 12px 0; padding: 0;}
+.pages ul {list-style: none; margin: 0; padding: 0;}
+.pages ul li {margin: 0 0 4px 0; padding: 0;}
+
+.pages ul li div {position: relative; margin: 0; padding: 8px 0 8px 0; background-color: #f8f8f8; border: 1px solid #e8e8e8; overflow: hidden;}
+.pages ul li div:hover {background-color: #e8e8e8;}
+.pages ul li img.-move {display: block; position: absolute; z-index: 2; left: 8px; top: 10px; margin: 0;}
+.pages ul li img.-state {display: block; position: absolute; z-index: 2; right: 136px; top: 10px; margin: 0;}
+.pages ul li img.-nav {display: block; position: absolute; z-index: 2; right: 112px; top: 10px; margin: 0;}
+.pages ul li a.-edit {display: block; position: absolute; z-index: 2; right: 48px; top: 9px; margin: 0;}
+.pages ul li a.-show {display: block; position: absolute; z-index: 2; right: 72px; top: 9px; margin: 0;}
+.pages ul li input {display: block; position: absolute; z-index: 2; right: 8px; top: 10px; margin: 0;}
+.pages ul li span {display: block; margin: 0 600px 0 32px;}
+.pages ul li i {display: block; float: right; width: 400px; margin: 0 176px 0 0; font-style: normal;}
+
+.pages ul li ul {margin-top: 4px;}
+.pages ul li ul li {margin-left: 32px;}
+
+.pages ul .dragging {width: auto !important; border: 1px solid #e8e8e8;}
+.pages ul .dragging div {padding-right: 32px;}
+.pages ul .dragging a, .pages ul .dragging img.-state, .pages ul .dragging img.-nav, .pages ul .dragging input, .pages ul .dragging i {display: none;}
+
+.pages ul .placeholder {background-color: #d8d8d8;}
+
 .ui-dialog-content {font-size: 95%;}
 .upload {margin: 0 0 10px 0;}
 .upload form input {font: normal 75%/1 Tahoma, Geneva, sans-serif;}
@@ -222,6 +246,9 @@ form.formtastic fieldset.inputs img {display: block; margin: 3px 0 0 25%; paddin
 .inline-errors {margin: 0 0 0 25% !important; color: #ff0000; font-size: 90%; font-weight: bold; }
 
 .hasDatepicker {width: 8em !important;}
+
+div.actions {text-align: right;}
+div.actions input {font-size: 11px;}
 
 #assets li, form.formtastic fieldset ul.gallery li {overflow: hidden;}
 #assets li span, form.formtastic fieldset ul.gallery li span {display: block; float: left; width: 24%; margin: 0;}
