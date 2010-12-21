@@ -22,8 +22,8 @@ module AdminHelpers
         end
       elsif engine == :carrierwave
         uploader = @object.send(:"#{method}")
-        a = unless uploader.file.nil?
-          ct = uploader.meta_content_type(style)
+        a = unless uploader.file.nil?                    
+          ct = uploader.respond_to?(:meta_content_type) ? uploader.meta_content_type(style) : 'image'
           if ct =~ /image/
             "<img src='#{@object.send(method).url(style)}'/>".html_safe
           else
