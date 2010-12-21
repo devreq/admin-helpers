@@ -1,1 +1,1 @@
-<%= jq_html('#objects', render('objects')) %>
+<%= jq_html("#objects, ##{current_model.name.underscore}", render('objects')) %>
