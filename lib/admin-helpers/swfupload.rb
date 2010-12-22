@@ -1,5 +1,5 @@
 module AdminHelpers::Swfupload
-  def swfupload_control(id = 'swfupload_control')
+  def swfupload_control(id)
     %{
       <div id="#{id}" class="swfupload">
         <input type="button" id="#{id}_button"></input>
@@ -15,7 +15,7 @@ module AdminHelpers::Swfupload
     }
   end  
   
-  def swfupload_script(upload_url, id = 'swfupload_control' *args)
+  def swfupload_script(id, upload_url, *args)
     options = args.extract_options!
     update_id = options.delete(:update_id)
     update_url = options.delete(:update_url)
