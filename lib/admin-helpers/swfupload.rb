@@ -12,7 +12,7 @@ module AdminHelpers::Swfupload
       <div id="loading" class="loading" style="display: none;">
         <div class="progress"><p><b>Загрузка</b></p><div class="-files"</div></div>
       </div>
-    }
+    }.html_safe
   end  
   
   def swfupload_script(id, upload_url, *args)
