@@ -1,13 +1,21 @@
 module AdminHelpers::Swfupload
-  def swfupload_control
+  def swfupload_control(id = 'swfupload_control')
     %{
-      <div id="swfupload_control" class="swfupload">
-        <input type="button" id="swfupload_button"></input>
+      <div id="#{id}" class="swfupload">
+        <input type="button" id="#{id}_button"></input>
       </div>    
     }.html_safe
   end
+
+  def swfupload_loading
+    %{
+      <div id="loading" class="loading" style="display: none;">
+        <div class="progress"><p><b>Загрузка</b></p><div class="-files"</div></div>
+      </div>
+    }
+  end  
   
-  def swfupload_script(upload_url, *args)
+  def swfupload_script(upload_url, id = 'swfupload_control' *args)
     options = args.extract_options!
     update_id = options.delete(:update_id)
     update_url = options.delete(:update_url)
@@ -23,19 +31,15 @@ module AdminHelpers::Swfupload
       'button_image_url' => '/images/swfupload.png',
       'button_width' => '61',
       'button_height' => '22',
-      'button_placeholder_id' => "swfupload_button"
+      'button_placeholder_id' => "#{id}_button"
     });
     
     options_s = options.to_json
     
     %{
-      <div id="loading" class="loading" style="display: none;">
-        <div class="progress"><p><b>Загрузка</b></p><div class="-files"</div></div>
-      </div>
-
       <script type="text/javascript">
         $(function() {
-          $('#swfupload_control')
+          $('##{id}')
             .swfupload(#{options_s})
             .bind('fileQueued', function(event, file) {  
               var size = Math.round(file.size / (1024 * 1024));
@@ -48,7 +52,7 @@ module AdminHelpers::Swfupload
               $('#loading .-files').append(listitem);  
 
               $('#'+file.id+' .-cancel').bind('click', function(){ //Remove from queue on cancel click  
-                var swfu = $.swfupload.getInstance('#swfupload_control');  
+                var swfu = $.swfupload.getInstance('##{id}');  
                 swfu.cancelUpload(file.id);  
                 $('#'+file.id).slideUp('fast');  
               });
