@@ -262,9 +262,9 @@ div.actions input {font-size: 11px;}
 .attachments li a {display: block; float: left; width: 16px; height: 16px; margin: 2px 0 0 0;}
 
 .images {overflow: hidden;}
-.images li {position: relative; float: left; margin: 0 1em 1em 0;}
+.images li {position: relative; display: block; float: left; margin: 0 1em 1em 0;}
 
-.add {margin: 0 0 1em 0; font-size: 75%; line-height: 1;}
+.add {display: inline-block; margin: 0 0 1em 0; font-size: 75%; line-height: 1;}
 
 .redactor {width: 74.25% !important;}
 
