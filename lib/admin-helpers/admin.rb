@@ -16,14 +16,16 @@ module AdminHelpers
       label = options.delete(:label) || I18n.t(:"admin.navigation.#{key}")
 
       o = {
-        active,
-        chosen,
         :active => "<li class='active'>#{label}</li>", 
         :inactive => "<li>#{link_to label, url}</li>",
         :chosen => "<li class='chosen'>#{link_to label, url}</li>"        
       }.merge(options)
             
-      stateful_link_to(o).html_safe
+      stateful_link_to(
+        active,
+        chosen,
+        o
+      ).html_safe
     end
 
     def admin_heading_content
