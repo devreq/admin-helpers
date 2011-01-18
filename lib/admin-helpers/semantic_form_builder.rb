@@ -26,7 +26,7 @@ module AdminHelpers
         a = unless uploader.file.nil?                    
           ct = uploader.respond_to?(:meta_content_type) ? uploader.meta_content_type(style) : 'image'
           if ct =~ /image/
-            image_tag @object.send(method).url(style), image_html
+            self.template.image_tag @object.send(method).url(style), image_html
           else
             fn = uploader.meta_filename
             fs = uploader.meta_size(style)
