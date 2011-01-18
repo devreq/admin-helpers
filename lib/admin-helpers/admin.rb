@@ -14,12 +14,17 @@ module AdminHelpers
     def admin_nav_link(key, url, active, chosen = nil, *args)
       options = args.extract_options!
       label = options.delete(:label) || I18n.t(:"admin.navigation.#{key}")
+
+      o = {
+        :active => "<li class='active'>#{label}</li>", 
+        :inactive => "<li>#{link_to label, url}</li>",
+        :chosen => "<li class='chosen'>#{link_to label, url}</li>"        
+      }.merge(options)
+            
       stateful_link_to(
         active,
         chosen,
-        :active => "<li class='active'>#{label}</li>", 
-        :inactive => "<li>#{link_to label, url}</li>",
-        :chosen => "<li class='chosen'>#{link_to label, url}</li>"
+        o
       ).html_safe
     end
 
