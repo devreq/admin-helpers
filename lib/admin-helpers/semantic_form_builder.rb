@@ -5,6 +5,7 @@ module AdminHelpers
     def attachment_input(method, options)
       style = options.delete(:style)
       after = options.delete(:after)    
+      image_html = options.delete(:image_html) || {}
       html_options = options.delete(:input_html) || {}
       
       engine = options.delete(:engine) || :paperclip
@@ -25,7 +26,7 @@ module AdminHelpers
         a = unless uploader.file.nil?                    
           ct = uploader.respond_to?(:meta_content_type) ? uploader.meta_content_type(style) : 'image'
           if ct =~ /image/
-            "<img src='#{@object.send(method).url(style)}'/>".html_safe
+            image_tag @object.send(method).url(style), image_options
           else
             fn = uploader.meta_filename
             fs = uploader.meta_size(style)
