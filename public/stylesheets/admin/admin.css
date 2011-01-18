@@ -264,6 +264,7 @@ div.actions input {font-size: 11px;}
 .images {overflow: hidden;}
 .images li {position: relative; display: block !important; float: left; width: auto !important; margin: 0 10px 10px 0 !important; border: 1px solid #ddd;}
 .images li img {display: block; margin: 0; padding: 0;}
+.images li a.delete img {width: auto;}
 
 .add {display: inline-block; margin: 0 0 18px 0; font-size: 75%; line-height: 1;}
 
