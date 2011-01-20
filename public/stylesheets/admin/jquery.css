@@ -376,4 +376,4 @@
     height: 200px; /*must have*/
 }
 
-.ui-dialog {height: 2000px !important;}
+.ui-dialog-content {background-color: #000 !important; height: 2000px !important;}
