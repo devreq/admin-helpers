@@ -375,3 +375,5 @@
     width: 200px; /*must have*/
     height: 200px; /*must have*/
 }
+
+.ui-dialog {height: 2000px !important;}
