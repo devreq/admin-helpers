@@ -146,6 +146,7 @@ img.-move, img._move {cursor: move;}
 .pages ul li a.-show {display: block; position: absolute; z-index: 2; right: 72px; top: 9px; margin: 0;}
 .pages ul li input {display: block; position: absolute; z-index: 2; right: 8px; top: 10px; margin: 0;}
 .pages ul li span {display: block; margin: 0 600px 0 32px;}
+.pages ul li span div.swfupload {display: none; position: absolute;}
 .pages ul li i {display: block; float: right; width: 400px; margin: 0 176px 0 0; font-style: normal;}
 
 .pages ul li ul {margin-top: 4px;}
