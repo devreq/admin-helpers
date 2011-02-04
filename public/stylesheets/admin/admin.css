@@ -168,7 +168,7 @@ img.-move, img._move {cursor: move;}
 
 .swfupload {margin: 0 0 1em 0; height: 22px !important;}
 
-.loading {position: fixed; z-index: 11; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
+.loading {position: fixed; z-index: 999; left: 50%; top: 50%; width: 300px; height: auto; margin: -50px 0 0 -150px; padding: 0; background-color: #ddf8cc;}
 .progress {border: 1px solid #c5deb6; margin: 4px; padding: 15px 20px 12px 20px;}
 .loading p {color: #333; font: normal 75%/120% Tahoma, Geneva, sans-serif;}
 .loading p.name {margin: 0;}
