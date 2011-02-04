@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{admin-helpers}
-  s.version = "0.0.4"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Sokolov"]
@@ -59,36 +59,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<admin-helpers>, [">= 0"])
-      s.add_runtime_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_runtime_dependency(%q<ruby-debug>, [">= 0.10.3"])
-      s.add_runtime_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_runtime_dependency(%q<rails>, [">= 3.0.0"])
-      s.add_runtime_dependency(%q<formtastic>, [">= 0"])
-      s.add_runtime_dependency(%q<haml>, [">= 0"])
-      s.add_runtime_dependency(%q<stateful_link>, [">= 0"])
-      s.add_runtime_dependency(%q<jammit>, [">= 0"])
-      s.add_runtime_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_runtime_dependency(%q<ruby-debug>, [">= 0.10.3"])
-      s.add_runtime_dependency(%q<rspec-rails>, [">= 0"])
       s.add_runtime_dependency(%q<rails>, [">= 3.0.0"])
       s.add_runtime_dependency(%q<formtastic>, [">= 0"])
       s.add_runtime_dependency(%q<haml>, [">= 0"])
       s.add_runtime_dependency(%q<stateful_link>, [">= 0"])
       s.add_runtime_dependency(%q<jammit>, [">= 0"])
     else
-      s.add_dependency(%q<admin-helpers>, [">= 0"])
-      s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_dependency(%q<ruby-debug>, [">= 0.10.3"])
-      s.add_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_dependency(%q<rails>, [">= 3.0.0"])
-      s.add_dependency(%q<formtastic>, [">= 0"])
-      s.add_dependency(%q<haml>, [">= 0"])
-      s.add_dependency(%q<stateful_link>, [">= 0"])
-      s.add_dependency(%q<jammit>, [">= 0"])
-      s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_dependency(%q<ruby-debug>, [">= 0.10.3"])
-      s.add_dependency(%q<rspec-rails>, [">= 0"])
       s.add_dependency(%q<rails>, [">= 3.0.0"])
       s.add_dependency(%q<formtastic>, [">= 0"])
       s.add_dependency(%q<haml>, [">= 0"])
@@ -96,18 +72,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jammit>, [">= 0"])
     end
   else
-    s.add_dependency(%q<admin-helpers>, [">= 0"])
-    s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-    s.add_dependency(%q<ruby-debug>, [">= 0.10.3"])
-    s.add_dependency(%q<rspec-rails>, [">= 0"])
-    s.add_dependency(%q<rails>, [">= 3.0.0"])
-    s.add_dependency(%q<formtastic>, [">= 0"])
-    s.add_dependency(%q<haml>, [">= 0"])
-    s.add_dependency(%q<stateful_link>, [">= 0"])
-    s.add_dependency(%q<jammit>, [">= 0"])
-    s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-    s.add_dependency(%q<ruby-debug>, [">= 0.10.3"])
-    s.add_dependency(%q<rspec-rails>, [">= 0"])
     s.add_dependency(%q<rails>, [">= 3.0.0"])
     s.add_dependency(%q<formtastic>, [">= 0"])
     s.add_dependency(%q<haml>, [">= 0"])
