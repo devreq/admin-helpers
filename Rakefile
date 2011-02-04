@@ -13,7 +13,7 @@ begin
     gem.summary = "Helpers for rockbee/molinos admin panels"
     gem.description = "Helpers for rockbee/molinos admin panels"
     gem.files =  FileList["[A-Z]*", "lib/**/*"]
-    gem.version = "0.0.2"
+    gem.version = "0.0.4"
     gem.email = "gzigzigzeo@gmail.com"
     gem.authors = ["Victor Sokolov"]
     gem.homepage = "http://studio.molinos.ru"
@@ -22,6 +22,7 @@ begin
     gem.add_dependency "formtastic"
     gem.add_dependency "haml"
     gem.add_dependency "stateful_link"
+    gem.add_dependency 'jammit'
   end
   
   Jeweler::GemcutterTasks.new
