@@ -375,3 +375,5 @@
     width: 200px; /*must have*/
     height: 200px; /*must have*/
 }
+
+.ui-dialog-content {padding-bottom: 14px !important; overflow: hidden !important;}

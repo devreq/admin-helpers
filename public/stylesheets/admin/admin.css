@@ -229,7 +229,6 @@ form.formtastic .inputs .select select {max-width: 37%;}
 form.formtastic fieldset ol li.boolean {margin-top: -6px; margin-bottom: 0;}
 form.formtastic .inputs .boolean input {margin: 0 0.75em 0 0; vertical-align: text-top;}
 form.formtastic .inputs .boolean label {margin: 0; padding-top: 0; font-size: 90%;}
-.ui-dialog-content .boolean input {margin-left: -6px !important;}
 
 form.formtastic .buttons {margin: 0; padding: 0 !important; border: 0;}
 form.formtastic .buttons ol li {margin: 0;}
@@ -243,10 +242,12 @@ form.formtastic fieldset.inputs img {display: block; margin: 3px 0 0 25%; paddin
 .ui-dialog-content {min-height: 100px !important;}
 .ui-dialog-content form.formtastic {margin: 0; padding: 0; border: 0; background-color: transparent;}
 .ui-dialog-content form.formtastic fieldset.inputs {margin-bottom: 12px; padding-top: 18px;}
-.ui-dialog-content form.formtastic fieldset.inputs label {width: 24%; padding-top: 0.25em; font-size: 90%;}
+.ui-dialog-content form.formtastic fieldset.inputs label {width: 25%; padding-top: 0.25em; font-size: 85%;}
 .ui-dialog-content form.formtastic fieldset.inputs input {padding: 0;}
 .ui-dialog-content form.formtastic fieldset.buttons {margin: 0; padding: 0; border: 0;}
 .ui-dialog-content form.formtastic fieldset.buttons input {margin-bottom: -10px; font-size: 90%;}
+.ui-dialog-content .inline-hints, .ui-dialog-content .inline-errors {font-size: 85%;}
+.ui-dialog-content .boolean lable {font-size: 85%;}
 
 .inline-hints {margin: 0 0 0 25% !important; font-size: 90%;}
 .inline-errors {margin: 0 0 0 25% !important; color: #ff0000; font-size: 90%; font-weight: bold; }
