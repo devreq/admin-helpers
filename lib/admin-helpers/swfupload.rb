@@ -75,12 +75,13 @@ module AdminHelpers::Swfupload
             }) 
             .bind('uploadComplete', function(event, file){ 
               // upload has completed, try the next one in the queue 
-              $(this).swfupload('startUpload');  
               var stats = $(this).data('__swfu').getStats();
               if (stats.files_queued == 0) {
                 $('#loading .-files').html('');
                 $('#loading').hide();
-              }
+              } else {
+              $(this).swfupload('startUpload');                 
+              };
             });
         });  
       </script>    
