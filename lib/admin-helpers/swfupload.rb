@@ -37,54 +37,50 @@ module AdminHelpers::Swfupload
     options_s = options.to_json
     
     %{
-      <script type="text/javascript">
-        $(function() {
-          $('##{id}')
-            .swfupload(#{options_s})
-            .bind('fileQueued', function(event, file) {  
-              var size = Math.round(file.size / (1024 * 1024));
-              var listitem='<div id="'+file.id+'">' +
-              '<p class="name">' + file.name + ' (' + size +' MB)' +
-              '<p class="bar"><span style="width: 0%;"></span></p>' +
-              '<p><a href="#" class="-cancel">Отмена</a></p>' +
-              '</div>';
-              $('#loading').show();
-              $('#loading .-files').append(listitem);  
+      $('##{id}')
+        .swfupload(#{options_s})
+        .bind('fileQueued', function(event, file) {  
+          var size = Math.round(file.size / (1024 * 1024));
+          var listitem='<div id="'+file.id+'">' +
+          '<p class="name">' + file.name + ' (' + size +' MB)' +
+          '<p class="bar"><span style="width: 0%;"></span></p>' +
+          '<p><a href="#" class="-cancel">Отмена</a></p>' +
+          '</div>';
+          $('#loading').show();
+          $('#loading .-files').append(listitem);  
 
-              $('#'+file.id+' .-cancel').bind('click', function(){ //Remove from queue on cancel click  
-                var swfu = $.swfupload.getInstance('##{id}');  
-                swfu.cancelUpload(file.id);  
-                $('#'+file.id).slideUp('fast');  
-              });
-              // start the upload since it's queued  
-              $(this).swfupload('startUpload'); 
-            }) 
-            .bind('fileQueueError', function(event, file, errorCode, message){ 
-              alert('Size of the file '+file.name+' is greater than limit'); 
-            }) 
-            .bind('uploadStart', function(event, file){
-              $('#loading #'+file.id).find('a.-cancel').hide(); 
-            }) 
-            .bind('uploadProgress', function(event, file, bytesLoaded){ 
-              var percentage = Math.round((bytesLoaded/file.size)*100); 
-              $('#loading #' + file.id).find('p.bar span').css('width', percentage + '%'); 
-            }) 
-            .bind('uploadSuccess', function(event, file, serverData){ 
-              var item = $('#loading #'+file.id+' p.bar').replaceWith('<p class="processing">Обработка...</p>');      
-              $('##{update_id}').html(serverData);
-            }) 
-            .bind('uploadComplete', function(event, file){ 
-              // upload has completed, try the next one in the queue 
-              var stats = $(this).data('__swfu').getStats();
-              if (stats.files_queued == 0) {
-                $('#loading .-files').html('');
-                $('#loading').hide();
-              } else {
-              $(this).swfupload('startUpload');                 
-              };
-            });
-        });  
-      </script>    
+          $('#'+file.id+' .-cancel').bind('click', function(){ //Remove from queue on cancel click  
+            var swfu = $.swfupload.getInstance('##{id}');  
+            swfu.cancelUpload(file.id);  
+            $('#'+file.id).slideUp('fast');  
+          });
+          // start the upload since it's queued  
+          $(this).swfupload('startUpload'); 
+        }) 
+        .bind('fileQueueError', function(event, file, errorCode, message){ 
+          alert('Size of the file '+file.name+' is greater than limit'); 
+        }) 
+        .bind('uploadStart', function(event, file){
+          $('#loading #'+file.id).find('a.-cancel').hide(); 
+        }) 
+        .bind('uploadProgress', function(event, file, bytesLoaded){ 
+          var percentage = Math.round((bytesLoaded/file.size)*100); 
+          $('#loading #' + file.id).find('p.bar span').css('width', percentage + '%'); 
+        }) 
+        .bind('uploadSuccess', function(event, file, serverData){ 
+          var item = $('#loading #'+file.id+' p.bar').replaceWith('<p class="processing">Обработка...</p>');      
+          $('##{update_id}').html(serverData);
+        }) 
+        .bind('uploadComplete', function(event, file){ 
+          // upload has completed, try the next one in the queue 
+          var stats = $(this).data('__swfu').getStats();
+          if (stats.files_queued == 0) {
+            $('#loading .-files').html('');
+            $('#loading').hide();
+          } else {
+          $(this).swfupload('startUpload');                 
+          };
+        });
     }.html_safe
   end
 end
