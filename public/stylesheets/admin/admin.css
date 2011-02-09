@@ -278,6 +278,7 @@ div.actions input {font-size: 11px;}
 .custom-color {display: block; position: absolute; z-index: 2; left: 4px; top: 4px;}
 .pages ul li.file div {background-color: #fff;}
 .pages ul li.file div:hover {background-color: #f8f8f8;}
+.fileupload {min-height: 0 !important; height: 20px !important;}
 
 /*
 Formtastic styles
