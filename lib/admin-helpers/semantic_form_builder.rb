@@ -37,7 +37,7 @@ module AdminHelpers
 
       self.label(method, options_for_label(options)) <<
       self.file_field(method, html_options) <<
-      self.hidden_field("#{method}_cache") <<
+      (self.hidden_field("#{method}_cache") if engine == :carrierwave) << 
       a <<
       after
     end
