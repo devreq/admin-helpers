@@ -280,6 +280,9 @@ div.actions input {font-size: 11px;}
 .pages ul li.file div:hover {background-color: #f8f8f8;}
 .fileupload {min-height: 0 !important; height: 20px !important;}
 
+.list td span.skype_pnh_print_container {display: inline !important;}
+.list td span.skype_pnh_container {display: none !important;}
+
 /*
 Formtastic styles
 
